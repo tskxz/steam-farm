@@ -47,7 +47,7 @@ Depois de instalar essas 3 *modules* já consegue rodar, execute o programa com:
 `node app.js`  
   
   
-### Linux  
+### Linux (Ubuntu)  
 #### Git
 Estou a usar o ubuntu neste caso, para instalar o git use `apt`:  
 `sudo apt update`  
