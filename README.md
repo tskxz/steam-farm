@@ -57,11 +57,25 @@ Agora instale o git:
 Para obter o node js e npm use o `apt`, faça:   
 `sudo apt update`   
   
-Instale o node js
+Instale o node js  
 `sudo apt install nodejs`  
   
 Instale o gerenciador de pacotes Node.js, com:  
 `sudo apt install npm`  
-   
+
+#### Cloning
+Faça um *clone* com este comando:  
+`git clone https://github.com/tanjilk/steam-noodles.git`  
+  
+Vá para o repositório com:  
+`cd steam-noodles`  
+  
+Já que está no repositório, precisa se de instalar algumas dependências para que rode o programa, instale 3 *modules* com esses comandos:  
+`npm install steam-user`
+`npm install prompt`
+`npm install readline-sync`  
+  
+Depois de instalar essas 3 *modules* já consegue rodar, execute o programa com: 
+`node app.js`
 
 
