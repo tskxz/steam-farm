@@ -4,6 +4,10 @@ const readlineSync = require("readline-sync");
 
 const client = new SteamUser();
 
+
+
+
+
 console.log("\x1b[33m", "Por favor, faça login ao digitar os seus credenciais: ");
 console.log("\x1b[37m", " ");
 prompt.start();
@@ -85,11 +89,59 @@ client.on('loggedOn', () => {
 	client.gamesPlayed(games);
 	console.log("Jogos que foram adicionados: " + games);
 	console.log("\x1b[32m", "Jogos recebidos com sucesso. ✔️")
+	console.log("\x1b[32m", "Configurações básicas efetuada com sucesso. ✔️")
+	/*
+	console.log("\x1b[37m", "Gostaria de querer uma resposta automática? [y/n]")
+	var auto = readlineSync.question(": ");
+	if(auto == "y"){
+		console.log("Exemplo: Olá. sou um bot do steam noodles! :D")
+		console.log("Exemplo: Olá. estou ocupado! Não fale comigo agora :D")
+		var choice = readlineSync.question("Escreva uma frase que responde automáticamente se alguém mandar mensagem para ti: ")
+		console.log("O bot irá responder " + choice)
+		function replySuc(){
+			console.log("\x1b[32m", "Configurado com sucesso ✔️")
+		}
+		setTimeout(replySuc, 3000);
+	} else if(auto == "n"){
+		console.log("O bot vai ficar em silencio.")
+	} else{
+		console.log("O bot vai ficar em silencio.")
+	}*/
+	console.log("\x1b[37m", "Gostaria de querer uma resposta automática? [y/n]")
+	var auto = readlineSync.question(": ");
+	if(auto == "y"){
+		console.log("Exemplo: Olá. sou um bot do steam noodles! :D")
+		console.log("Exemplo: Olá. estou ocupado! Não fale comigo agora :D")
+		var choice = readlineSync.question("Escreva uma frase que responde automáticamente se alguém mandar mensagem para ti: ")
+		console.log("O bot irá responder " + choice)
+		function replySuc(){
+			console.log("\x1b[32m", "Configurado com sucesso ✔️")
+			}
+		setTimeout(replySuc, 3000);
+	} else if(auto == "n"){
+		console.log("O bot vai ficar em silencio.")
+	} else{
+		console.log("O bot vai ficar em silencio.")
+	}
+
+	client.on("friendMessage", function(steamID, message){
+	console.log("\x1b[35m", "Mensagem recebida pelo " + steamID + ": " + message);
+	if(message=="hi"){
+		client.chatMessage(steamID, "Hello! I am a bot, beta version.");
+	} else if (message == "hello"){
+		client.chatMessage(steamID, "Hello! I am a bot, beta version.");
+	} else {
+		client.chatMessage(steamID, choice);
+		}
+	})
 		
 })
 
-console.log("\x1b[32m", "Configurações básicas efetuada com sucesso. ✔️")
 
+
+
+
+/*
 client.on("friendMessage", function(steamID, message){
 	console.log("\x1b[35m", "Mensagem recebida pelo " + steamID + ": " + message);
 	if(message=="hi"){
@@ -97,8 +149,8 @@ client.on("friendMessage", function(steamID, message){
 	} else if (message == "hello"){
 		client.chatMessage(steamID, "Hello! I am a bot, beta version.");
 	} else {
-		client.chatMessage(steamID, "Beta Version steam bot noodles.js");
+		client.chatMessage(steamID, choice);
 	}
 })
 
-
+*/
