@@ -41,7 +41,27 @@ Já que está no repositório, precisa se de instalar algumas dependências para
 `npm install readline-sync`  
   
 Depois de instalar essas 3 *modules* já consegue rodar, execute o programa com: 
-`node app.js`
-
+`node app.js`  
+  
+  
+### Linux  
+#### Git
+Estou a usar o ubuntu neste caso, para instalar o git use `apt`:  
+`sudo apt update`  
+   
+Agora instale o git:  
+`sudo apt install git`
+  
+  
+#### Node js
+Para obter o node js e npm use o `apt`, faça:   
+`sudo apt update`   
+  
+Instale o node js
+`sudo apt install nodejs`  
+  
+Instale o gerenciador de pacotes Node.js, com:  
+`sudo apt install npm`  
+   
 
 
