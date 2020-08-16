@@ -73,7 +73,7 @@ client.on('loggedOn', () => {
 		
 	} else if(status == "2"){
 		client.setPersona(SteamUser.EPersonaState.Offline);
-		functon wait1(){
+		function wait1(){
 			console.log("O seu perfil foi definido como OFFLINE")
 		}
 		setTimeout(wait1, 3000);
