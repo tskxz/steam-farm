@@ -11,8 +11,9 @@ Este programa é focado para as pessoas que queiram farmar cartas. Com essas car
 ## Instala no teu PC
 
 
-<img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/Windows-10-Small-Logo.png" width="100" height="100">
-### Windows 7/8/10
+<img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/Windows-10-Small-Logo.png" width="100" height="100">  
+  
+ ### Windows 7/8/10
 #### Certifique se tem o git
 Verifica se tens o git instalado. Abre o comando de linhas e escreve  
 `git --version`  
