@@ -1,3 +1,5 @@
+// @author tanjilk
+
 const prompt = require("prompt");
 const SteamUser = require("steam-user");
 const readlineSync = require("readline-sync");
