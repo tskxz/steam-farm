@@ -47,7 +47,7 @@ Depois de instalar essas 3 *modules* já consegue rodar, execute o programa com:
 `node app.js`  
   
   
-<img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/ab83a72375405b94a89cbdd0f944604b-ubuntu-logo-by-vexels.png">  
+<img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/ab83a72375405b94a89cbdd0f944604b-ubuntu-logo-by-vexels.png" width="150" height="150">  
 
 
 ### Linux (Ubuntu)  
