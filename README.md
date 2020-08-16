@@ -90,4 +90,5 @@ Depois de instalar essas 3 *modules* já consegue rodar, execute o programa com:
 <img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/screen1.jpg">  
 
 <img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/screen.png">  
-
+  
+<img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/screen3.jpg"> 
