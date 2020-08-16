@@ -84,4 +84,10 @@ Já que está no repositório, precisa se de instalar algumas dependências para
 Depois de instalar essas 3 *modules* já consegue rodar, execute o programa com: 
 `node app.js`
 
+## Images  
+
+
+<img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/screen1.jpg">  
+
+<img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/screen.png">  
 
