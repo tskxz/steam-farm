@@ -6,10 +6,6 @@ const readlineSync = require("readline-sync");
 
 const client = new SteamUser();
 
-
-
-
-
 console.log("\x1b[33m", "Por favor, faça login ao digitar os seus credenciais: ");
 console.log("\x1b[37m", " ");
 prompt.start();
@@ -70,12 +66,23 @@ client.on('loggedOn', () => {
 	var status = readlineSync.question("Escolha o status: ");
 	if(status == "1"){
 		client.setPersona(SteamUser.EPersonaState.Online);
-		console.log("O seu perfil foi definido como ONLINE")
+		function wait(){
+			console.log("O seu perfil foi definido como ONLINE")	
+		}
+		setTimeout(wait, 3000);
+		
 	} else if(status == "2"){
 		client.setPersona(SteamUser.EPersonaState.Offline);
-		console.log("O seu perfil foi definido como OFFLINE")
+		functon wait1(){
+			console.log("O seu perfil foi definido como OFFLINE")
+		}
+		setTimeout(wait1, 3000);
 	} else {
-		console.log("\x1b[31m", "Um erro inesperado aconteceu. Tente outra vez. ❗")
+		function waiterr(){
+			console.log("\x1b[31m", "Um erro inesperado aconteceu. Tente outra vez. ❗")	
+		}
+		setTimeout(waiterr, 2000)
+		
 	}
 	// client.setPersona(SteamUser.EPersonaState.Offline);
 	console.log("\x1b[37m", "Introduza os App ID dos jogos que gostaria de farmar");
