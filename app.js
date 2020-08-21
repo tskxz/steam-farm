@@ -136,9 +136,9 @@ client.on('loggedOn', () => {
 	client.on("friendMessage", function(steamID, message){
 	console.log("\x1b[35m", "Mensagem recebida pelo " + steamID + ": " + message);
 	if(message=="hi"){
-		client.chatMessage(steamID, "Hello! I am a bot, beta version.");
+		client.chatMessage(steamID, choice);
 	} else if (message == "hello"){
-		client.chatMessage(steamID, "Hello! I am a bot, beta version.");
+		client.chatMessage(steamID, choice);
 	} else {
 		client.chatMessage(steamID, choice);
 		}
