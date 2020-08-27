@@ -1,15 +1,20 @@
+/*
 // @author tanjilk
+*/
 
 const prompt = require("prompt");
 const SteamUser = require("steam-user");
 const readlineSync = require("readline-sync");
+//const readline = require('readline');
 
 const client = new SteamUser();
 
 console.log("\x1b[33m", "Por favor, faça login ao digitar os seus credenciais: ");
 console.log("\x1b[37m", " ");
+/*
 prompt.start();
-
+*/
+/*
 prompt.get(['username', 'password'], function(err, result){
 	if(err){
 		return onErr(err);
@@ -25,7 +30,18 @@ prompt.get(['username', 'password'], function(err, result){
 function onErr(err){
 	console.log(err);
 	return 1;
-}
+}*/
+
+var username = readlineSync.question("Username: ");
+var password = readlineSync.question("Password: ", {
+	hideEchoBack: true
+});
+
+const logOnOptions = {
+	accountName: username,
+	password: password
+};
+client.logOn(logOnOptions);
 
 client.on('loggedOn', () => {
 	console.log("\x1b[32m","Login feito com sucesso. ✔️");
