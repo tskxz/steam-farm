@@ -2,7 +2,7 @@ Steam Noodles
 =============
 
 ![](https://raw.githubusercontent.com/tanjilk/steam-noodles/master/Steam_Logo.png)  
-
+##### (english version on hold)
 ### Versão em lingua portuguesa
 #### Interface em linhas de comando, rode o Steam Noodles no seu terminal
 
