@@ -4,7 +4,7 @@ Steam Noodles
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://steamcommunity.com/id/tanjil)
 
 
-![](https://raw.githubusercontent.com/tanjilk/steam-noodles/master/Steam_Logo.png)  
+![](https://i.imgur.com/XGAFDvb.png)  
 ##### (english version on hold)
 ### Versão em lingua portuguesa
 #### Interface em linhas de comando, rode o Steam Noodles no seu terminal
@@ -14,7 +14,7 @@ Este programa é focado para as pessoas que queiram farmar cartas. Com essas car
 ## Instala no teu PC
 
 
-<img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/Windows-10-Small-Logo.png" width="100" height="100">  
+<img src="https://i.imgur.com/Lw72tt5.png" width="100" height="100">  
   
  ### Windows 7/8/10
 #### Certifique se tem o git
@@ -50,7 +50,7 @@ Depois de instalar essas 3 *modules* já consegue rodar, execute o programa com:
 `node app.js`  
   
   
-<img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/ab83a72375405b94a89cbdd0f944604b-ubuntu-logo-by-vexels.png" width="150" height="150">  
+<img src="https://i.imgur.com/hCq1yOG.png" width="150" height="150">  
 
 
 ### Linux (Ubuntu)  
