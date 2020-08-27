@@ -1,5 +1,6 @@
 Steam Noodles
 =============
+[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/noneidonthv/steam-noodles?type=cf-1&key=eyJhbGciOiJIUzI1NiJ9.NWYzNWE0MjA4NDI2NmFlZDdjNzkxZTdh.URHgXcUNZvaKN5ikD9PzODmOE3aUgmFZOQ6_9rJnomc)]( https://g.codefresh.io/pipelines/edit/new/builds?id=5f47dbc86db0ba7abd3c93de&pipeline=steam-noodles)
 
 ![](https://raw.githubusercontent.com/tanjilk/steam-noodles/master/Steam_Logo.png)  
 ##### (english version on hold)
