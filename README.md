@@ -89,4 +89,4 @@ Depois de instalar essas 3 *modules* já consegue rodar, execute o programa com:
 
 ## Images  
 
-<img src="https://raw.githubusercontent.com/tanjilk/steam-noodles/master/shsnoodles.png">  
+<img src="https://i.imgur.com/o0pukoK.png">  
