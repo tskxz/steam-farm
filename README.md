@@ -1,4 +1,4 @@
-Steam Noodles
+Steam Farm
 =============
 [![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/noneidonthv/steam-noodles?type=cf-1&key=eyJhbGciOiJIUzI1NiJ9.NWYzNWE0MjA4NDI2NmFlZDdjNzkxZTdh.URHgXcUNZvaKN5ikD9PzODmOE3aUgmFZOQ6_9rJnomc)]( https://g.codefresh.io/pipelines/edit/new/builds?id=5f47dbc86db0ba7abd3c93de&pipeline=steam-noodles)
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://steamcommunity.com/id/tanjil)
@@ -7,7 +7,7 @@ Steam Noodles
 ![](https://i.imgur.com/XGAFDvb.png)  
 ##### (english version on hold)
 ### Versão em lingua portuguesa
-#### Interface em linhas de comando, rode o Steam Noodles no seu terminal
+#### Interface em linhas de comando, rode o Steam Farm no seu terminal
 
 Este programa é focado para as pessoas que queiram farmar cartas. Com essas cartas, podes vender, ou subir de nivel com elas, porém, se farmar os jogos, podes receber 3 cartas em aproximadamente 1 hora ou 2 horas (pode demorar mais) **sem ter que precisar instalar os jogos no teu computador!**  Cada jogo pode possuir mais de 5 cartas. Se quiseres podes até fazer trocas das tuas cartas neste [grupo](https://steamcommunity.com/groups/tradingcards)  
 
@@ -36,10 +36,10 @@ Depois de instalar o git, recomendo que esteja no *Desktop* faça `dir` no coman
 `cd C:\Users\MyName\Desktop`  
   
 Depois disso faça um *clone* com este comando:  
-`git clone https://github.com/tanjilk/steam-noodles.git`  
+`git clone https://github.com/tanjilk/steam-farm.git`  
   
 Vá para o repositório com:  
-`cd steam-noodles`  
+`cd steam-farm   `
   
 Já que está no repositório, precisa se de instalar algumas dependências para que rode o programa, instale 3 *modules* com esses comandos:  
 `npm install steam-user`
@@ -74,10 +74,10 @@ Instale o gerenciador de pacotes Node.js, com:
 
 #### Cloning
 Faça um *clone* com este comando:  
-`git clone https://github.com/tanjilk/steam-noodles.git`  
+`git clone https://github.com/tanjilk/steam-farm.git`  
   
 Vá para o repositório com:  
-`cd steam-noodles`  
+`cd steam-farm`  
   
 Já que está no repositório, precisa se de instalar algumas dependências para que rode o programa, instale 3 *modules* com esses comandos:  
 `npm install steam-user`
