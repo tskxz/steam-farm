@@ -9,6 +9,7 @@ Steam Farm
 ### Versão em lingua portuguesa
 #### Interface em linhas de comando, rode o Steam Farm no seu terminal
 
+## Introducão
 Este programa é focado para as pessoas que queiram farmar cartas. Com essas cartas, podes vender, ou subir de nivel com elas, porém, se farmar os jogos, podes receber 3 cartas em aproximadamente 1 hora ou 2 horas (pode demorar mais) **sem ter que precisar instalar os jogos no teu computador!**  Cada jogo pode possuir mais de 5 cartas. Se quiseres podes até fazer trocas das tuas cartas neste [grupo](https://steamcommunity.com/groups/tradingcards)  
 
 ## Instala no teu PC
@@ -16,9 +17,9 @@ Este programa é focado para as pessoas que queiram farmar cartas. Com essas car
 
 <img src="https://i.imgur.com/Lw72tt5.png" width="100" height="100">  
   
- ### Windows 7/8/10
+ ## Windows 7/8/10
 #### Certifique se tem o git
-Verifica se tens o git instalado. Abre o comando de linhas e escreve  
+Verifica se tens o **git** instalado. Abre o comando de linhas e escreve  
 `git --version`  
 O resultado que se espera é algo do tipo `git version 1.9.5` mas se aparecer *'git' is not recognized as an internal or external command, operable program or batch file.* significa que o git não está instalado.
 Instale o [git](https://git-scm.com/download/win) e rode o instalador .exe  e conclua a instalação. Depois da instalação. de certeza que o git irá funcionar desta vez.
@@ -53,7 +54,7 @@ Depois de instalar essas 3 *modules* já consegue rodar, execute o programa com:
 <img src="https://i.imgur.com/hCq1yOG.png" width="150" height="150">  
 
 
-### Linux (Ubuntu)  
+## Linux (Ubuntu)  
 #### Git
 Estou a usar o ubuntu neste caso, para instalar o git use `apt`:  
 `sudo apt update`  
@@ -87,6 +88,44 @@ Já que está no repositório, precisa se de instalar algumas dependências para
 Depois de instalar essas 3 *modules* já consegue rodar, execute o programa com: 
 `node app.js`
 
+## Steam App IDS
+Para encontrar os app ids podes procurar neste [site](https://steamdb.info/apps/)
+
+## Código
+### Requirements
+```js
+    const prompt = require("prompt");
+    const SteamUser = require("steam-user");
+    const readlineSync = require("readline-sync");
+    //const readline = require('readline');
+    
+    const client = new SteamUser();
+    
+    console.log("\x1b[33m", "Por favor, faça login ao digitar os seus credenciais: ");
+    console.log("\x1b[37m", " ");
+   ```
+   ### Message Event   
+   ```js
+   client.on("friendMessage", function(steamID, message){
+	console.log("\x1b[35m", "Mensagem recebida pelo " + steamID + ": " + message);
+	if(message=="hi"){
+		client.chatMessage(steamID, choice);
+	} else if (message == "hello"){
+		client.chatMessage(steamID, choice);
+	} else {
+		client.chatMessage(steamID, choice);
+		}
+	})
+```
+
+## License
+MIT License
+
+Copyright (c) 2020 Tanjil
+
 ## Images  
 
 <img src="https://i.imgur.com/o0pukoK.png">  
+
+
+
