@@ -1,10 +1,16 @@
 /*
 // @author tanjilk
 */
+// Argument
+const argum = process.argv[2];
 
+if(!argum){
+	console.log('Necessita de passar o username como um argumento.');
+}
 const prompt = require("prompt");
 const SteamUser = require("steam-user");
 const readlineSync = require("readline-sync");
+
 //const readline = require('readline');
 
 const client = new SteamUser();
@@ -32,13 +38,13 @@ function onErr(err){
 	return 1;
 }*/
 
-var username = readlineSync.question("Username: ");
+// var username = readlineSync.question("Username: ");
 var password = readlineSync.question("Password: ", {
 	hideEchoBack: true
 });
 
 const logOnOptions = {
-	accountName: username,
+	accountName: argum,
 	password: password
 };
 client.logOn(logOnOptions);
