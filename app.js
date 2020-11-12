@@ -5,6 +5,8 @@
 const argum = process.argv[2];
 
 
+// If the argument doesnt pass
+
 if(!argum){
 	console.log('Necessita de passar o username como um argumento.');
 }
@@ -24,13 +26,6 @@ else {
 	var password = readlineSync.question("Password: ", {
 		hideEchoBack: true
 	});
-	/*
-	const logOnOptions = {
-		accountName: argum,
-		password: password
-	};
-	client.logOn(logOnOptions);
-	*/
 
 	const login = (username, password) => {
 		const logOnOptions = {
@@ -85,6 +80,9 @@ else {
 			games.push(game);
 		}
 		client.gamesPlayed(games);
+		if(!games){
+			console.log('Não foi introduzido nenhum jogo')
+		}
 		console.log("Jogos que foram adicionados: " + games);
 		console.log("\x1b[32m", "Jogos recebidos com sucesso. ✔️")
 		console.log("\x1b[32m", "Configurações básicas efetuada com sucesso. ✔️")
