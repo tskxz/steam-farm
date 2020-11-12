@@ -4,51 +4,48 @@
 // Argument
 const argum = process.argv[2];
 
+
 if(!argum){
 	console.log('Necessita de passar o username como um argumento.');
 }
+
 else {
 	const prompt = require("prompt");
 	const SteamUser = require("steam-user");
 	const readlineSync = require("readline-sync");
 
-	//const readline = require('readline');
+	
 
 	const client = new SteamUser();
 
 	console.log("\x1b[33m", "Por favor, faça login ao digitar os seus credenciais: ");
 	console.log("\x1b[37m", " ");
-	/*
-	prompt.start();
-	*/
-	/*
-	prompt.get(['username', 'password'], function(err, result){
-		if(err){
-			return onErr(err);
-		}
-		const logOnOptions = {
-		accountName: result.username,
-		password: result.password
-		
-		};
-		client.logOn(logOnOptions);
-	})
 
-	function onErr(err){
-		console.log(err);
-		return 1;
-	}*/
-
-	// var username = readlineSync.question("Username: ");
 	var password = readlineSync.question("Password: ", {
 		hideEchoBack: true
 	});
-
+	/*
 	const logOnOptions = {
 		accountName: argum,
 		password: password
 	};
 	client.logOn(logOnOptions);
+	*/
+
+	const login = (username, password) => {
+		const logOnOptions = {
+			accountName: username,
+			password: password
+		}
+		try{
+			client.logOn(logOnOptions);
+		} catch(er) {
+			console.log("Error", er);
+		}
+		
+	}
+
+	login(argum, password);
 
 	client.on('loggedOn', () => {
 		console.log("\x1b[32m","Login feito com sucesso. ✔️");
