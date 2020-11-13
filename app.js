@@ -32,11 +32,11 @@ else {
 			accountName: username,
 			password: password
 		}
-		try{
-			client.logOn(logOnOptions);
-		} catch(er) {
-			console.log("Error", er);
-		}
+
+		client.logOn(logOnOptions);
+		client.on('error', function(e){
+			console.log('Please double check your password.');
+		});
 		
 	}
 
@@ -101,7 +101,7 @@ else {
 		} else if(auto == "n"){
 			console.log("O bot vai ficar em silencio.")
 		} else{
-			console.log("O bot vai ficar em silencio.")
+			console.log("\x1b[31m", "Um erro inesperado aconteceu. Tente outra vez. ❗");
 		}
 
 		client.on("friendMessage", function(steamID, message){
