@@ -107,13 +107,14 @@ Para encontrar os app ids podes procurar neste [site](https://steamdb.info/apps/
    ```
    ### Message Event   
    ```js
- client.on("friendMessage", function(steamID, message){
- console.log("\x1b[35m", "Mensagem recebida pelo " + steamID + ": " + message);
- if(message){
-	client.chatMessage(steamID, choice);
-	}
-})
-```
+   client.on("friendMessage", function(steamID, message){
+				console.log("\x1b[35m", "Mensagem recebida pelo " + steamID + ": " + message);
+				if(message){
+						lient.chatMessage(steamID, choice);
+				}
+			})
+
+   ```
 
 ## License
 MIT License
