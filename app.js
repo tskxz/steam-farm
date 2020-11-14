@@ -97,6 +97,12 @@ else {
 			function replySuc(){
 				console.log("\x1b[32m", "Configurado com sucesso ✔️")
 				}
+				client.on("friendMessage", function(steamID, message){
+					console.log("\x1b[35m", "Mensagem recebida pelo " + steamID + ": " + message);
+					if(message){
+						client.chatMessage(steamID, choice);
+					}
+				})
 			setTimeout(replySuc, 3000);
 		} else if(auto == "n"){
 			console.log("O bot vai ficar em silencio.")
@@ -105,14 +111,7 @@ else {
 		}
 
 		client.on("friendMessage", function(steamID, message){
-		console.log("\x1b[35m", "Mensagem recebida pelo " + steamID + ": " + message);
-		if(message=="hi"){
-			client.chatMessage(steamID, choice);
-		} else if (message == "hello"){
-			client.chatMessage(steamID, choice);
-		} else {
-			client.chatMessage(steamID, choice);
-			}
+			console.log("\x1b[35m", "Mensagem recebida pelo " + steamID + ": " + message);
 		})
 			
 	})
