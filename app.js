@@ -35,7 +35,7 @@ else {
 
 		client.logOn(logOnOptions);
 		client.on('error', function(e){
-			console.log('Please double check your password.');
+			console.log('Um erro aconteceu, por favor tente de novo.');
 		});
 		
 	}

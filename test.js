@@ -12,3 +12,10 @@ for(i = 0; i < array.length; i++){
 }
 // console.log(array.length);
 console.log(games);
+
+client.on("friendMessage", function(steamID, message){
+	console.log("\x1b[35m", "Mensagem recebida pelo " + steamID + ": " + message);
+	if(message){
+		client.chatMessage(steamID, choice);
+	}
+})
