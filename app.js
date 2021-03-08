@@ -106,6 +106,19 @@ else {
 			setTimeout(replySuc, 3000);
 		} else if(auto == "n"){
 			console.log("O bot vai ficar em silencio.")
+			console.log("Aceitar automaticamente os pedidos de amizade?");
+			var automatic_accept_requests = readlineSync.question(": ");
+			if(automatic_accept_requests == "y"){
+				client.on('friendRelationship', function(steamID, relationship){
+					if(relationship == SteamUser.Steam.EFriendRelationship.RequestRecipient){
+						client.addFriend(steamID);
+						client.chatMessage("Hello!");
+					};
+				});
+			}
+			else {
+				console.log("Ignorando os pedidos de amizade");
+			}
 		} else{
 			console.log("\x1b[31m", "Um erro inesperado aconteceu. Tente outra vez. ❗");
 		}
