@@ -6,23 +6,28 @@ Repository from https://github.com/tanjilk/steam-farm
 
 
 // Argument
+const chalk = require('chalk');
+
+const error = chalk.bold.red;
+const warning = chalk.keyword('orange');
+
 const argum = process.argv[2];
 process.env.TZ = 'Europe/Portugal';
 d = new Date();
 
-console.log("███████╗████████╗███████╗ █████╗ ███╗   ███╗      ███████╗ █████╗ ██████╗ ███╗   ███╗");
-console.log("██╔════╝╚══██╔══╝██╔════╝██╔══██╗████╗ ████║      ██╔════╝██╔══██╗██╔══██╗████╗ ████║");
-console.log("███████╗   ██║   █████╗  ███████║██╔████╔██║█████╗█████╗  ███████║██████╔╝██╔████╔██║");
-console.log("╚════██║   ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║╚════╝██╔══╝  ██╔══██║██╔══██╗██║╚██╔╝██║");
-console.log("███████║   ██║   ███████╗██║  ██║██║ ╚═╝ ██║      ██║     ██║  ██║██║  ██║██║ ╚═╝ ██║");
-console.log("╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝      ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝");
+console.log(chalk.cyan("███████╗████████╗███████╗ █████╗ ███╗   ███╗      ███████╗ █████╗ ██████╗ ███╗   ███╗"));
+console.log(chalk.cyan("██╔════╝╚══██╔══╝██╔════╝██╔══██╗████╗ ████║      ██╔════╝██╔══██╗██╔══██╗████╗ ████║"));
+console.log(chalk.cyan("███████╗   ██║   █████╗  ███████║██╔████╔██║█████╗█████╗  ███████║██████╔╝██╔████╔██║"));
+console.log(chalk.cyan("╚════██║   ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║╚════╝██╔══╝  ██╔══██║██╔══██╗██║╚██╔╝██║"));
+console.log(chalk.cyan("███████║   ██║   ███████╗██║  ██║██║ ╚═╝ ██║      ██║     ██║  ██║██║  ██║██║ ╚═╝ ██║"));
+console.log(chalk.cyan("╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝      ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝"));
                                                                                      
 
 
 // If the argument doesnt pass
 
 if(!argum){
-	console.log('É necessário passar o username como um argumento.');
+	console.log(error('É necessário passar o username como um argumento.'));
 }
 
 else {
@@ -34,8 +39,8 @@ else {
 
 	const client = new SteamUser();
 
-	console.log("\x1b[33m", "Por favor, faça login ao digitar os seus credenciais: ");
-	console.log("\x1b[37m", " ");
+	console.log(warning("[*] Por favor, faça login ao digitar os seus credenciais: "));
+	console.log(" ");
 
 	var password = readlineSync.question("Password: ", {
 		hideEchoBack: true
@@ -49,8 +54,8 @@ else {
 
 		client.logOn(logOnOptions);
 		client.on('error', function(e){
-			console.log('Um erro aconteceu, por favor tente de novo.');
-			console.log(d.toLocaleTimeString());
+			console.log(error('[!] Um erro aconteceu, por favor tente de novo.'));
+			console.log(error('[!] ' + d.toLocaleTimeString()));
 		});
 		
 	}
@@ -58,30 +63,33 @@ else {
 	login(argum, password);
 
 	client.on('loggedOn', () => {
-		console.log("\x1b[32m","Login feito com sucesso. ✔️");
-		console.log("\x1b[37m", "Define o status");
-		console.log('\x1b[36m%s\x1b[0m', "1. Online\n2. Offline");
+		console.log(chalk.green("[*] Login feito com sucesso."));
+	
+		console.log(chalk.cyan("1. Online\n2. Offline"));
 		
 		var status = readlineSync.question("Escolha o status: ");
 		if(status == "1"){
 			client.setPersona(SteamUser.EPersonaState.Online);
 			function wait(){
-				console.log("O seu perfil foi definido como ONLINE")	
+				console.log(chalk.blue("O seu perfil foi definido como ONLINE"));
 			}
 			setTimeout(wait, 3000);
 			
 		} else if(status == "2"){
 			client.setPersona(SteamUser.EPersonaState.Offline);
 			function wait1(){
-				console.log("O seu perfil foi definido como OFFLINE")
+				console.log(chalk.blue("O seu perfil foi definido como OFFLINE"))
 			}
 			setTimeout(wait1, 3000);
 		} else {
 			function waiterr(){
-				console.log("\x1b[31m", "Um erro inesperado aconteceu. Tente outra vez. ❗");
-				d.toLocaleTimeString();	
+				console.log(error("[!] Um erro inesperado aconteceu. Tente outra vez."));
+					
 			}
-			setTimeout(waiterr, 2000)
+			setTimeout(waiterr, 3000)
+			process.on('exit', function(code){
+				return console.log(error('[!]' + d.toLocaleTimeString()));
+			})
 			
 		}
 		
